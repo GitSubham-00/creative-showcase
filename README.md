@@ -182,9 +182,9 @@ Images
 ## 👨‍💻 Author
 Subham Maity
 
-`GitHub`: https://github.com/your-username
+`GitHub`: https://github.com/GitSubham-00
 
-`LinkedIn`: https://linkedin.com/in/your-profile
+`LinkedIn`: https://linkedin.com/in/subhammaity
 
 ## ⭐ If you found this project interesting, feel free to star the repository!
 
