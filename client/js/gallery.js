@@ -1,20 +1,41 @@
+/* =========================
+   API Base URL
+========================= */
+const API_BASE = "https://creative-showcase-y6r9.onrender.com";
+
 const gallery = document.getElementById("gallery");
 const emptyMessage = document.getElementById("emptyMessage");
 
-const images = getImages(); // from storage.js
+/* =========================
+   Load Gallery Images (Backend)
+========================= */
+async function loadGalleryImages() {
+  try {
+    const res = await fetch(`${API_BASE}/api/images/random`);
+    const images = await res.json();
 
-if (images.length === 0) {
-  emptyMessage.style.display = "block";
-} else {
-  emptyMessage.style.display = "none";
+    gallery.innerHTML = "";
 
-  // Shuffle images randomly
-  images.sort(() => 0.5 - Math.random());
+    if (!images.length) {
+      emptyMessage.style.display = "block";
+      return;
+    }
 
-  images.forEach(img => {
-    const imageEl = document.createElement("img");
-    imageEl.src = img.imageData;
-    imageEl.alt = img.title || "Artwork";
-    gallery.appendChild(imageEl);
-  });
+    emptyMessage.style.display = "none";
+
+    images.forEach((img) => {
+      const imageEl = document.createElement("img");
+      imageEl.src = img.imageUrl;
+      imageEl.alt = img.title || "Artwork";
+      gallery.appendChild(imageEl);
+    });
+  } catch (error) {
+    console.error("Gallery load error:", error);
+    emptyMessage.style.display = "block";
+  }
 }
+
+/* =========================
+   Initial Load
+========================= */
+loadGalleryImages();
