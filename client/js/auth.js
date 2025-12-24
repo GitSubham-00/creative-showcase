@@ -1,4 +1,9 @@
 /* =========================
+   API Base URL
+========================= */
+const API_BASE = "https://creative-showcase-y6r9.onrender.com";
+
+/* =========================
    Sign Up Logic (Backend)
 ========================= */
 
@@ -18,7 +23,7 @@ if (signupForm) {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/signup", {
+      const res = await fetch(`${API_BASE}/api/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -60,7 +65,7 @@ if (loginForm) {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch(`${API_BASE}/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
