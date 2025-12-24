@@ -55,7 +55,7 @@ It provides private dashboards for creators and public profile pages accessible 
 - Multer (File handling)
 
 ## 🗂 Project Structure
-
+---
 creative-showcase/
 │
 ├── client/
