@@ -1,9 +1,17 @@
+/* =========================
+   API Base URL
+========================= */
+const API_BASE = "https://creative-showcase-y6r9.onrender.com";
+
 const gallery = document.getElementById("landingGallery");
 const noImages = document.getElementById("noImages");
 
+/* =========================
+   Load Landing Page Images
+========================= */
 async function loadLandingImages() {
   try {
-    const res = await fetch("http://localhost:5000/api/images/random");
+    const res = await fetch(`${API_BASE}/api/images/random`);
     const images = await res.json();
 
     gallery.innerHTML = "";
@@ -21,10 +29,13 @@ async function loadLandingImages() {
       imageEl.alt = img.title || "Artwork";
       gallery.appendChild(imageEl);
     });
-  } catch (err) {
-    console.error("Landing page error:", err);
+  } catch (error) {
+    console.error("Landing page error:", error);
     noImages.style.display = "block";
   }
 }
 
+/* =========================
+   Initial Load
+========================= */
 loadLandingImages();
