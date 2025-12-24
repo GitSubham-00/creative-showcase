@@ -96,14 +96,14 @@ creative-showcase/
 
 Create a `.env` file inside the `server` folder:
 
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
+.env
+- PORT=5000
+- MONGO_URI=your_mongodb_connection_string
+- JWT_SECRET=your_jwt_secret
+- CLOUDINARY_CLOUD_NAME=your_cloud_name
+- CLOUDINARY_API_KEY=your_api_key
+- CLOUDINARY_API_SECRET=your_api_secret
+##
 🛠 Installation & Setup
 1️⃣ Clone the Repository
 bash
@@ -117,10 +117,8 @@ cd server
 npm install
 npm run dev
 Backend will run on:
-
-arduino
-Copy code
-http://localhost:5000
+- http://localhost:5000
+  
 3️⃣ Frontend Setup
 Open client/index.html using:
 
