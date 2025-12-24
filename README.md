@@ -5,8 +5,7 @@ It provides private dashboards for creators and public profile pages accessible 
 
 ## 🚀 Live Demo
 
-🔗 **Frontend:** (Add your deployed frontend URL here)  
-🔗 **Backend API:** (Add your deployed backend URL here)
+🔗 **Link - https://creativeshowcase-subham-maity.netlify.app/
 
 ## 📌 Features
 
