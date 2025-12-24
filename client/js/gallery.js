@@ -3,7 +3,7 @@
 ========================= */
 const API_BASE = "https://creative-showcase-y6r9.onrender.com";
 
-const gallery = document.getElementById("gallery");
+const gallery = document.getElementById("landingGallery");
 const emptyMessage = document.getElementById("emptyMessage");
 
 /* =========================
@@ -35,7 +35,4 @@ async function loadGalleryImages() {
   }
 }
 
-/* =========================
-   Initial Load
-========================= */
 loadGalleryImages();
