@@ -54,40 +54,44 @@ It provides private dashboards for creators and public profile pages accessible 
 - Cloudinary (Image storage & delivery)
 - Multer (File handling)
 
-## 🗂 Project Structure
+## 📂 Project Structure
 
+```text
 creative-showcase/
 │
 ├── client/
-│ ├── index.html
-│ ├── login.html
-│ ├── signup.html
-│ ├── dashboard.html
-│ ├── profile.html
-│ ├── css/
-│ │ └── style.css
-│ └── js/
-│ ├── index.js
-│ ├── auth.js
-│ ├── upload.js
-│ ├── profile.js
-│ └── storage.js
+│   ├── index.html
+│   ├── login.html
+│   ├── signup.html
+│   ├── dashboard.html
+│   ├── profile.html
+│   │
+│   ├── css/
+│   │   └── style.css
+│   │
+│   └── js/
+│       ├── index.js
+│       ├── auth.js
+│       ├── upload.js
+│       ├── profile.js
+│       └── storage.js
 │
 ├── server/
-│ ├── src/
-│ │ ├── server.js
-│ │ ├── routes/
-│ │ │ ├── auth.routes.js
-│ │ │ └── image.routes.js
-│ │ ├── models/
-│ │ │ ├── User.js
-│ │ │ └── Image.js
-│ │ ├── middleware/
-│ │ │ ├── auth.middleware.js
-│ │ │ └── upload.middleware.js
-│ │ └── config/
-│ │ └── cloudinary.js
-│ └── package.json
+│   ├── src/
+│   │   ├── server.js
+│   │   ├── routes/
+│   │   │   ├── auth.routes.js
+│   │   │   └── image.routes.js
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   └── Image.js
+│   │   ├── middleware/
+│   │   │   ├── auth.middleware.js
+│   │   │   └── upload.middleware.js
+│   │   └── config/
+│   │       └── cloudinary.js
+│   │
+│   └── package.json
 │
 └── README.md
 
@@ -96,7 +100,7 @@ creative-showcase/
 
 Create a `.env` file inside the `server` folder:
 
-env
+`.env`
 - PORT=5000
 - MONGO_URI=your_mongodb_connection_string
 - JWT_SECRET=your_jwt_secret
