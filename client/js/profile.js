@@ -1,3 +1,11 @@
+/* =========================
+   API Base URL
+========================= */
+const API_BASE = "https://creative-showcase-y6r9.onrender.com";
+
+/* =========================
+   Get Username from URL
+========================= */
 const params = new URLSearchParams(window.location.search);
 const username = params.get("username");
 
@@ -5,23 +13,27 @@ const profileName = document.getElementById("profileName");
 const profileGallery = document.getElementById("profileGallery");
 const noProfileImages = document.getElementById("noProfileImages");
 
+/* =========================
+   Initial Check
+========================= */
 if (!username) {
   profileName.innerText = "User not found";
   noProfileImages.style.display = "block";
 } else {
   profileName.innerText = username;
-
   loadPublicImages(username);
 }
 
+/* =========================
+   Load Public Profile Images
+========================= */
 async function loadPublicImages(username) {
   try {
     const res = await fetch(
-      `http://localhost:5000/api/images/user/${username}`
+      `${API_BASE}/api/images/user/${encodeURIComponent(username)}`
     );
 
     const images = await res.json();
-
     profileGallery.innerHTML = "";
 
     if (!images.length) {
@@ -37,8 +49,8 @@ async function loadPublicImages(username) {
       imageEl.alt = img.title || "Artwork";
       profileGallery.appendChild(imageEl);
     });
-  } catch (err) {
-    console.error("Failed to load public profile", err);
+  } catch (error) {
+    console.error("Failed to load public profile", error);
     noProfileImages.style.display = "block";
   }
 }
