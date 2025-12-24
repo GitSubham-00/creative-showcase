@@ -30,13 +30,19 @@ if (!username) {
 async function loadPublicImages(username) {
   try {
     const res = await fetch(
-      `${API_BASE}/api/images/user/${encodeURIComponent(username)}`
+      `${API_BASE}/api/users/${encodeURIComponent(username)}/images`
     );
 
-    const images = await res.json();
+    if (!res.ok) {
+      throw new Error("Failed to fetch profile images");
+    }
+
+    const data = await res.json(); 
+    const images = data.images; // backend sends { username, images }
+
     profileGallery.innerHTML = "";
 
-    if (!images.length) {
+    if (!images || images.length === 0) {
       noProfileImages.style.display = "block";
       return;
     }
