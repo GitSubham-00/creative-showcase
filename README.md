@@ -94,7 +94,7 @@ creative-showcase/
 │   └── package.json
 │
 └── README.md
-
+```
 
 ## ⚙️ Environment Variables
 
