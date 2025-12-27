@@ -121,26 +121,24 @@ cd creative-showcase
   
 ## 3️⃣ Frontend Setup
 - Open client/index.html using:
-
 - VS Code Live Server OR
-
 - Any local static server
 
 Frontend runs on:
 - http://127.0.0.1:5500/client
-🔌 API Endpoints
+ 
+**🔌 API Endpoints**
+  
 Auth
-- POST /api/auth/register – Register user
 
+- POST /api/auth/register – Register user
 - POST /api/auth/login – Login user
 
 Images
+
 - POST /api/images/upload – Upload artwork (protected)
-
 - GET /api/images/my – Get logged-in user's images
-
 - GET /api/images/random – Random images for landing page
-
 - GET /api/images/user/:username – Public profile images
 
 ## 🔐 Security Notes
@@ -163,7 +161,7 @@ Images
 
 - Admin moderation panel
 
-## ⭐ Final Note (For Recruiters)
+##  Final Note (For Recruiters)
 - This project covers the following key engineering aspects:
 
 - Full-stack application architecture (frontend + backend separation)
@@ -179,13 +177,14 @@ Images
 - End-to-end application workflow from user registration to deployment readiness
 
 ## 👨‍💻 Author
-Subham Maity
 
-`GitHub`: https://github.com/GitSubham-00
+**Subham Maity**
 
-`LinkedIn`: https://linkedin.com/in/subhammaity
+**GitHub**: https://github.com/GitSubham-00
 
-## ⭐ If you found this project interesting, feel free to star the repository!
+**LinkedIn**: https://linkedin.com/in/subhammaity
+
+If you found this project interesting, feel free to star the repository!
 
 
 
